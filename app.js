@@ -4,7 +4,7 @@ const records = [
     d: '2024-04-18',
     s: 'No recolectada',
     h: 'Posible muestra de orina u otro tejido específico, solo según valoración profesional.',
-    n: 'Registro de planificación ficticio O-001. Piel, médula ósea u otras biopsias requieren indicación clínica; no se obtienen para esta demostración.',
+    n: 'Registro de planificación ficticio AQ-001. Piel, médula ósea u otras biopsias requieren indicación clínica; no se obtienen para esta demostración.',
     q: 'Sin muestra ni análisis. La selección depende del tipo celular, la pregunta clínica y la validación del laboratorio.'
   },
   {
