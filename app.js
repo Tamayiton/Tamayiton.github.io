@@ -4,16 +4,16 @@ const records = [
     d: '2024-04-18',
     s: 'No recolectada',
     h: 'Posible muestra de orina u otro tejido específico, solo según valoración profesional.',
-    n: 'Registro de planificación ficticio AQ-001. Piel, médula ósea u otras biopsias requieren indicación clínica; no se obtienen para esta demostración.',
-    q: 'Sin muestra ni análisis. La selección depende del tipo celular, la pregunta clínica y la validación del laboratorio.'
+    n: 'Registro de planificación O-001. Piel, médula ósea u otras biopsias requieren indicación clínica; no se obtienen para esta demostración.',
+    
   },
   {
     t: 'Saliva',
     d: '2020-01-16',
     s: 'Registro de referencia',
-    h: 'Perfil ilustrativo A en los marcadores comparados.',
-    n: 'Muestra simulada S-001. La saliva contiene una mezcla de tipos celulares; no representa un tejido puro.',
-    q: 'Calidad ficticia: aceptable. Método didáctico: comparación de marcadores STR; sin datos genéticos reales.'
+    h: 'Perfil ilustrativo A.',
+    n: 'Muestra S-001. La saliva contiene diferentes tipos de células, por lo que no se puede considerar una mezcla de un solo tipo de tejido.',
+    q: 'Calidad de la muestra: aceptable. Se puede utilizar para comparar el perfil genético con otras muestras de referencia, pero hay que tener en cuenta que contiene celulas de distintos orígenes, se requiere la realizacion de pruebas adicionales.'
   },
   {
     t: 'Pelo con raíz',
@@ -21,7 +21,7 @@ const records = [
     s: 'No concluyente',
     h: 'ADN nuclear insuficiente en el ejemplo. No permite comparar.',
     n: 'Muestra simulada P-001. Tener raíz no garantiza material nuclear suficiente. No interpretar ausencia de señal como ausencia de quimerismo.',
-    q: 'Calidad ficticia: insuficiente. Recolección adicional solo si estuviera justificada por profesionales.'
+    q: 'Calidad de la muestra: insuficiente. Recolección adicional solo si estuviera justificada por profesionales.'
   },
   {
     t: 'Sangre',
@@ -29,7 +29,7 @@ const records = [
     s: 'Registro de referencia',
     h: 'Perfil ilustrativo A en los marcadores comparados.',
     n: 'Muestra simulada B-001. La comparación de ADN nuclear refleja sobre todo leucocitos, no todos los tejidos.',
-    q: 'Calidad ficticia: aceptable. Sin antecedentes de transfusión o trasplante en el guion del caso.'
+    q: 'Calidad de la muestra: aceptable. Sin antecedentes de transfusión o trasplante en el guion del caso.'
   },
   {
     t: 'Saliva',
@@ -37,7 +37,7 @@ const records = [
     s: 'Por validar',
     h: 'Señal adicional ficticia en algunos marcadores; causa sin determinar.',
     n: 'Muestra simulada S-002. Revisar identidad, contaminación y mezcla celular antes de interpretar. No se asigna un diagnóstico.',
-    q: 'Calidad ficticia: requiere revisión. Solicitar evaluación del laboratorio dentro del escenario educativo.'
+    q: 'Calidad de la muestra: requiere revisión. Solicitar evaluación del laboratorio dentro del escenario educativo.'
   },
   {
     t: 'Pelo con raíz',
@@ -45,7 +45,7 @@ const records = [
     s: 'Repetición ilustrativa',
     h: 'Perfil ilustrativo A; no resuelve el hallazgo de saliva.',
     n: 'Muestra simulada P-002. Un resultado concordante en esta muestra no excluye diferencias en otras células.',
-    q: 'Calidad ficticia: aceptable. Nota de revisión: conservar el resultado anterior sin sobrescribirlo.'
+    q: 'Calidad de la muestra: aceptable. Nota de revisión: conservar el resultado anterior sin sobrescribirlo.'
   },
   {
     t: 'Sangre',
@@ -53,7 +53,7 @@ const records = [
     s: 'Seguimiento',
     h: 'Perfil ilustrativo A; caso pendiente de revisión especializada.',
     n: 'Muestra simulada B-002. No extrapolar al organismo completo ni usar para decisiones de trasplante.',
-    q: 'Calidad ficticia: aceptable. Fecha del informe simulado: 18 abr 2024.'
+    q: 'Calidad de la muestra: aceptable. Fecha del informe simulado: 18 abr 2024.'
   }
 ];
 
