@@ -19,40 +19,40 @@ const records = [
     t: 'Pelo con raíz',
     d: '2020-01-16',
     s: 'No concluyente',
-    h: 'ADN nuclear insuficiente en el ejemplo. No permite comparar.',
-    n: 'Muestra simulada P-001. Tener raíz no garantiza material nuclear suficiente. No interpretar ausencia de señal como ausencia de quimerismo.',
-    q: 'Calidad de la muestra: insuficiente. Recolección adicional solo si estuviera justificada por profesionales.'
+    h: 'Recolección incompleta de material genético. No es posible comparar, se requiere más material.',
+    n: 'Muestra P-001. Tener raíz no garantiza material genético suficiente.',
+    q: 'Calidad de la muestra: incompleta. Recolección adicional solo si estuviera justificada por profesionales.'
   },
   {
     t: 'Sangre',
     d: '2020-01-16',
     s: 'Registro de referencia',
     h: 'Perfil ilustrativo A en los marcadores comparados.',
-    n: 'Muestra simulada B-001. La comparación de ADN nuclear refleja sobre todo leucocitos, no todos los tejidos.',
-    q: 'Calidad de la muestra: aceptable. Sin antecedentes de transfusión o trasplante en el guion del caso.'
+    n: 'Muestra B-001. El material genético encontrado en la sangre proviene principalmente de los globulos blancos, ya que son las células que contienen el ADN nuclear.',
+    q: 'Calidad de la muestra: aceptable. Sin antecedentes de transfusión o trasplante que afecten el resultado.'
   },
   {
     t: 'Saliva',
     d: '2024-03-20',
     s: 'Por validar',
-    h: 'Señal adicional ficticia en algunos marcadores; causa sin determinar.',
-    n: 'Muestra simulada S-002. Revisar identidad, contaminación y mezcla celular antes de interpretar. No se asigna un diagnóstico.',
-    q: 'Calidad de la muestra: requiere revisión. Solicitar evaluación del laboratorio dentro del escenario educativo.'
+    h: 'Se encontraron algunas diferencias en los resultados, pero todavia no se conoce la causa.',
+    n: 'Muestra S-002. Antes de analizar los resultados, es necesario comprobar que la muestra pertenece a la persona indicada y que no se haya mezclado o contaminado con otras muestras.',
+    q: 'Calidad de la muestra: requiere revisión. Solicitar evaluación del laboratorio antes de interpretar los resultados.'
   },
   {
     t: 'Pelo con raíz',
     d: '2024-04-15',
-    s: 'Repetición ilustrativa',
-    h: 'Perfil ilustrativo A; no resuelve el hallazgo de saliva.',
-    n: 'Muestra simulada P-002. Un resultado concordante en esta muestra no excluye diferencias en otras células.',
-    q: 'Calidad de la muestra: aceptable. Nota de revisión: conservar el resultado anterior sin sobrescribirlo.'
+    s: 'Repetición de análisis',
+    h: 'Perfil A; aunque los resultados coinciden con el perfil A de la sangre, no permite explicar las diferencias encontradas anteriormente en la muestra de saliva.',
+    n: 'Muestra P-002. Un resultado concordante en esta muestra no excluye diferencias en otras células.',
+    q: 'Calidad de la muestra: aceptable. Nota de revisión: conservar el resultado anterior para comparar ambos análisis.'
   },
   {
     t: 'Sangre',
     d: '2024-04-15',
     s: 'Seguimiento',
-    h: 'Perfil ilustrativo A; caso pendiente de revisión especializada.',
-    n: 'Muestra simulada B-002. No extrapolar al organismo completo ni usar para decisiones de trasplante.',
+    h: 'Perfil ilustrativo A; caso pendiente de revisión por parte de especialistas.',
+    n: 'Muestra B-002. Los resultados corresponden únicamente a la sangre, por lo que no se puede asumir que representen el perfil genético de otros tejidos.|',
     q: 'Calidad de la muestra: aceptable. Fecha del informe simulado: 18 abr 2024.'
   }
 ];
@@ -105,12 +105,12 @@ document.querySelector('#simulate').addEventListener('click', (event) => {
   item.innerHTML = `
     <small>12 OCT 2026 · SIMULADO</small>
     <b>Seguimiento añadido</b>
-    <p>Revisión educativa de notas. Sin nuevas muestras ni conclusión diagnóstica.</p>
+    <p>Revisión por parte de especialistas. Sin nuevas muestras ni conclusión diagnóstica.</p>
   `;
 
   document.querySelector('.timeline').append(item);
   document.querySelector('#feedback').textContent =
-    'Se añadió un evento ficticio. Se borrará al recargar o reiniciar.';
+    'Se añadió un seguimiento.';
   event.target.disabled = true;
 });
 
